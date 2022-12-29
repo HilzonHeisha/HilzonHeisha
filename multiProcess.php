@@ -1,8 +1,8 @@
 <?php
      include "config.php";
 	 
-	 $username = $_POST["username"];
-	 $password = md5($_POST["password"]);
+	 $username = $_GET["username"];
+	 $password = md5($_GET["password"]);
 	 
 	 $query = "SELECT * FROM user WHERE username ='$username' && password='$password'";
 	 $result = mysqli_query($conn, $query);
